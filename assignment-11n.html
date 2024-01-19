@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>assignment-11-n</title>
+  </head>
+  <body>
+    <script>
+      function countWords(words) {
+        const result = {};
+
+        for (let i = 0; i < words.length; i++) {
+          const tword = words[i];
+
+          // result[word] adds/accesses a property using whatever is
+          // saved inside the 'word' variable.
+          // If word = 'apple', result[word] will do result['apple']
+          // If word = 'grape', result[word] will do result['grape']
+          if (!result[tword]) {
+            result[tword] = 1;
+          } else {
+            result[tword]++;
+          }
+        }
+
+        return result;
+      }
+
+      console.log(countWords(['apple', 'grape', 'apple', 'apple','grape']));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>assignment 11</title>
+</head>
+<body>
+  
+  <script>
+
+    function numbers (nums) {
+      let result = {
+        min : null,       // or set min : nums[i],
+        max : null        // or set max : nums[i];
+      };
+
+      for (let i=0; i<nums.length; i++) {
+        const value = nums[i];
+        
+          // If the value is less than the min,
+          // update the min.
+        if (value< result.min) {
+          result.min = value;
+        } 
+
+          // If the value is greater than the max,
+          // update the max.
+         if (value > result.max) {
+          result.max = value;
+        }
+      }
+      return result;
+    }
+    console.log(numbers([-7,1,2,3,4,5,66]));
+
+    // in javascript we have also Math.min() 
+    //and Math.max() available for this purpose.
+
+  </script>
+</body>
+</html>

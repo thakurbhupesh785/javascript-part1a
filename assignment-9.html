@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>assignment 9</title>
+</head>
+<body>
+  <p>Amazon Shipping Order</p>
+  <input placeholder="Cost" class="js-input" onkeyup="
+  handleKeyPress ();
+  " >
+  <button onclick="
+  calculateTotal ();
+  ">Calculate</button>
+  <p class="js-message"></p>
+  <script>
+   function handleKeyPress () {
+    if (event.key = 'enter') {
+      calculateTotal();
+    }
+   }
+   function calculateTotal () {
+    let input = document.querySelector('.js-input');
+    
+    let price = Number(input.value) * 100;
+
+    if (price < 4000) {
+      price+=1000;
+    } else{
+      price;
+    }
+    document.querySelector('.js-message').innerHTML= `${price}`
+   } 
+  </script>
+</body>
+</html>

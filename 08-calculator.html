@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 08 calculator</title>
+  </head>
+  <body>
+    <P>
+      <button onclick="
+        updateCalculation('1');
+        ">1</button>
+      <button onclick="
+         updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+         updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation('+');
+      ">+</button>
+
+    </P>
+
+    <P>
+      <button onclick="
+        updateCalculation('4');
+        ">4</button>
+
+      <button onclick="
+         updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+     updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation('-');
+      ">-</button>
+
+    </P>
+
+    <P>
+      <button onclick="
+        updateCalculation('7');
+        ">7</button>
+
+      <button onclick="
+         updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation('*');
+      ">*</button>
+
+    </P>
+
+    <P>
+      <button onclick="
+        updateCalculation('0');
+        ">0</button>
+
+      <button onclick="
+         updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+         calculation = eval(calculation);
+        console.log(calculation);
+        localStorage.setItem('calculate',calculation);
+      ">=</button>
+
+      <button onclick="
+        updateCalculation('/');
+      ">/</button>
+
+    </P>
+
+    <P>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        console.log('cleared');
+        localStorage.setItem('calculate',calculation);
+        ">clear</button>
+    </P>
+
+   <script>
+    localStorage.getItem('calculation');
+    let calculation =  localStorage.getItem('calculate') || '';
+
+// we use getItem only when we wanrt to rereive our data bacl from localStorage.
+// we used getItem only on let calculation because we want to get back our data when required.
+//we used setItem on = and reset cause we are saving the data there.
+
+    function updateCalculation (value) {
+      calculation += value;
+      console.log(calculation);
+      localStorage.setItem('calculate',calculation);
+    }
+    // Optional: you can also create a function in order
+      // to reuse this code.
+      // simply write saveCalculation in those places.
+      // below comments -- are code!.
+     // function saveCalculation() {
+       // localStorage.setItem('calculation', calculation);
+      //}
+   </script>
+  </body>
+</html>

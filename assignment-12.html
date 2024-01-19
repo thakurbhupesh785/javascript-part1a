@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>assignment 12</title>
+</head>
+<body>
+  <script>
+   
+    function removeEgg (foods) {
+      let eggRemoved = 0;
+
+      return foods.filter((foods) => {
+        if (foods ==='egg' && eggRemoved<2) {
+          eggRemoved++;
+          return false
+        }
+       return true
+        
+      });
+      
+    }
+    console.log(removeEgg(['egg','ham','egg','asd','egg','dfg','egg']));
+  </script>
+</body>
+</html>
